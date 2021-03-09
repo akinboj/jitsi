@@ -1,0 +1,5 @@
+helm upgrade pegacorn-communicate-jitsi-site-a --install --namespace site-a --set serviceName=pegacorn-communicate-jitsi,basePort=30300,imagePullPolicy=Never,imageTag=1.0.0-snapshot,serviceType=NodePort,numOfPods=1 helm
+
+docker build --rm --build-arg IMAGE_BUILD_TIMESTAMP="%date% %time%" -t pegacorn-communicate-jitsi-jvb:1.0.0-snapshot .
+
+# and other containers
